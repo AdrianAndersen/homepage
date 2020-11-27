@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html lang="no">
+<head>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta charset="utf-8">
+    <title>Skineser.no - Hjem</title>
+
+
+    <!-- STYLE SHEETS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li id="navLogo"><a href="index.html">Skineser.no</a></li>
+            <li id="navGap"></li>
+            <li><a href="prosjekter.html">Prosjekter</a></li>
+            <li><a href="skineser.html">Hva er en skineser?</a></li>
+            <li><a href="omAdrian.html">Om Adrian</a></li>
+            <li><a href="kontakt.html">Kontakt Adrian</a></li>
+        </ul>
+    </nav>
+    <div id="responsivLogo">
+        <h1>Skineser</h1>
+    </div>
+    <button id="hamKnapp">
+        <div class="HBlinje"></div>
+        <div class="HBlinje"></div>
+        <div class="HBlinje"></div>
+    </button>
+    <!-- HEADER -->
+    <header id="indexHeader">
+        <h1>Velkommen til Skineser.no!</h1>
+        <h2>Hjemmesiden til skineseren Adrian</h2>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div id="containerIndexside">
+            <div class="IX" id="IXskineser">
+                <img src="images/skineser.jpg" alt="Bilde av en Skineser" />
+                <div>
+                    <h2>Hva er en Skineser?</h2>
+                    <p>Når du fikk vite om Skineser.no, lurte du sikkert på hvorfor Adrian ga nettsiden sin dette navnet. Du kan finne ut hvorfor her.</p>
+                    <button onclick="window.location.href='skineser.html'">Les om skinesere</button>
+                </div>
+            </div>
+            <div class="IX" id="IXomAdrian">
+                <img src="images/adrian.jpg" alt="Bilde av Adrian" />
+                <div>
+                    <h2>Hvem er Adrian?</h2>
+                    <p>Skineseren Adrian Arthur Andersen er mannen bak Skineser.no. Han driver mye med programmering og tekonlogi. Du kan lese mer om Adrian her.</p>
+                    <button onclick="window.location.href='omAdrian.html'">Les om Adrian</button>
+                </div>
+            </div>
+            <div class="IX" id="IXprosjekter">
+                <img src="images/prosjektDigitalMakt.jpg" alt="Bilde fra et av prosjektene" />
+                <div>
+                    <h2>Hva driver Adrian med?</h2>
+                    <p>Adrian har lenge drevet med programmering, og har valgt å legge ut noen av prosjektene han har jobbet med opp gjennom årene. Se prosjektene hans her.</p>
+                    <button onclick="window.location.href='prosjekter.html'">Se Adrians prosjekter</button>
+                </div>
+            </div>
+            <div class="IX" id="IXkontakt">
+                <img src="images/kontaktAdrian.png" alt="Illustrasjonsbilde" />
+                <div>
+                    <h2>Hvordan kontaker man Adrian?</h2>
+                    <p>Adrian er tilgjengelig på flere digitale platformer. Finn ut hvordan du kan komme i kontakt med ham her.</p>
+                    <button onclick="window.location.href='kontakt.html'">Kontakt Adrian</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <address>
+            <p><a href="kontakt.html">Kontakt Adrian</a></p>
+            <p><a href="" class="linkPhone"></a></p>
+            <p><a href=""  class="linkMail">epost: </a></p>
+        </address>
+        <div id="socialicons">
+            <a href="" title="Følg meg på Facebook" target="_blank" class="fa fa-facebook"></a>
+            <a href="" title="Følg meg på Youtube" target="_blank" class="fa fa-youtube"></a>
+            <a href="" title="Sjekk ut Linkedin-profilen min" target="_blank" class="fa fa-linkedin"></a>
+        </div>
+        <p class="copyright"></p>
+    </footer>
+    <script src="scripts/skineser.js"></script>
+</body>
+</html>

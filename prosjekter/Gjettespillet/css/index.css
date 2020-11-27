@@ -1,0 +1,370 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+body {
+    background-image: url(../bilder/bg.jpg);
+    background-size: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#logo {
+    font-family: 'Copperplate Gothic';
+    font-size: 4rem;
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin: 0 auto;
+    width: 40vw;
+}
+#scoreBoard {
+    width: 20rem;
+    border: 1px solid black;
+    position: fixed;
+    right: 3rem;
+    top: 3rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+#scoreBoard h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+}
+#scoreBoard b {
+    font-size: 1.3rem;
+}
+#topp5Container  {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+#topp5Container div {
+    font-size: 1.1rem;
+}
+#startside {
+    text-align: center;
+    margin-top: 1rem;
+    width: 100vw;
+}
+#startside h2 {
+    margin-bottom: 2rem;
+}
+.difknapper {
+    border: none;
+    margin: 0.2rem;
+    height: 2rem;
+    outline: none;
+}
+.difknapper:hover {
+    border: 0.02rem solid blue;
+}
+.difknappValgt {
+    font-weight: 900;
+    border: 0.15rem solid black;
+}
+#knappDifLett {
+    background-color: lightgreen;
+}
+#knappDifMiddels {
+    background-color: yellow;
+}
+#knappDifVanskelig {
+    background-color: orangered;
+}
+#knappDifGodTid {
+    background-color: darkred;
+    color: orange;
+}
+#knappDifEgendefinert {
+    background-color: deepskyblue;
+}
+#startside form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    text-align: center;
+}
+#startside form label {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#startside form input {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+#startside form img {
+    margin: 0 auto;
+    height: 2.5rem;
+}
+#knappLagVinnertall {
+    margin: 5rem auto;
+    padding: 2rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: none;
+    background-color: green;
+    font-family: Broadway;
+    font-size: 4rem;
+    outline: none;
+}
+#knappLagVinnertall:hover {
+    background-color: greenyellow;
+}
+#knappLagVinnertall:active {
+    background-color: green;
+}
+#ingameside {
+    grid-template-columns: repeat(12, 1fr);
+    text-align: center;
+    margin-top: 2rem;
+    width: 100vw;
+}
+#tidtaker, #gjettecontainer {
+    border: 0.1rem solid black;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0 1rem;
+}
+#defmengdeContainer {
+    margin: 2rem 0;
+    height: 5rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(104, 1fr)
+}
+#defMinVal {
+    margin-right: 0.5rem;
+}
+#defMinVal {
+    margin-left: 0.5rem;
+}
+#bottomLeft, #bottomRight {
+    background-color: red;
+}
+#bottomMiddle {
+    background-color: green;
+}
+#ingameside label {
+    font-size: 3rem;
+}
+#inpGjetning {
+    width: 100%;
+    height: 4rem;
+    padding: 0.2rem;
+    margin: 1rem auto;
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+}
+#knappGjetning {
+    border: none;
+    width: 10rem;
+    height: 4rem;
+    font-family: Britannic;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    background-color: lightgreen;
+}
+#knappGjetning:hover {
+    background-color: lawngreen;
+}
+#knappGjetning:active {
+    background-color: lightseagreen;
+}
+#vinnertallResultat {
+    background-color: yellowgreen;
+    padding: 1rem 2rem;
+    border-radius: 5%;
+    margin: 0 auto;
+    font-size: 3rem;
+}
+#resultatside {
+    grid-template-columns: repeat(12, 1fr);
+    text-align: center;
+    margin-top: 2rem;
+    font-size-adjust: 0.7;
+}
+#resultatside h2, h3 {
+    margin: 1rem 0 0.2rem 0;
+}
+#resultater {
+    border: 1px solid black;
+    width: 25rem;
+    text-align: left;
+    margin: 0.5rem auto 1rem auto;
+}
+#resultater b {
+    margin-left: 0.3rem;
+}
+#resultater p {
+    border-bottom: 1px solid black;
+    margin: 0.3rem;
+}
+#resultatside form {
+    text-align: left;
+}
+#required {
+    color: red;
+}
+#resultatside form input {
+    height: 2rem;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    margin: 0.3rem 0 1rem 0;
+}
+#knappSendResultat {
+    border: none;
+    height: 3rem;
+    padding: 0.6rem 0;
+    font-size: 1.2rem;
+    background-color: lightgreen;
+}
+#resultatside form button:hover {
+    background-color: lawngreen;
+}
+#resultatside form button:active {
+    background-color: darkseagreen;
+}
+#knappHjem {
+    width: 100%;
+    border: none;
+    padding: 0.4rem 0;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+#gameOver {
+    text-align: center;
+}
+#gameOver h1 {
+    font-size: 4rem;
+    color: red;
+    margin: 2rem 0;
+}
+#gameOver button {
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+#gameOver p {
+    font-size: 1.2rem;
+}
+#gameOver h2 {
+    font-size: 2rem;
+}
+#gameOver b {
+    font-size: 5rem;
+}
+.knappReload {
+    background-color: lightgreen;
+}
+.knappReload:hover {
+    background-color: lawngreen;
+}
+.knappLinkHighscore {
+    background-color: gold;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0.5rem 0;
+    margin: 0.4rem;
+}
+.knappLinkHighscore:hover {
+    background-color: goldenrod;
+}
+.knappLinkHighscore:active {
+    background-color: lightgoldenrodyellow;
+}
+#flexfill {
+    flex-grow: 1;
+}
+footer {
+    padding: 0 0 1rem 1rem;
+}
+@media screen and (orientation: landscape) {
+    #scoreBoard {
+        display: grid;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    #scoreBoard {
+        display: none;
+    }
+}
+.kol-1 {
+    grid-column: span 1;
+}
+
+.kol-2 {
+    grid-column: span 2;
+}
+
+.kol-3 {
+    grid-column: span 3;
+}
+
+.kol-4 {
+    grid-column: span 4;
+}
+
+.kol-5 {
+    grid-column: span 5;
+}
+
+.kol-6 {
+    grid-column: span 6;
+}
+
+.kol-7 {
+    grid-column: span 7;
+}
+
+.kol-8 {
+    grid-column: span 8;
+}
+
+.kol-9 {
+    grid-column: span 9;
+}
+
+.kol-10 {
+    grid-column: span 10;
+}
+
+.kol-11 {
+    grid-column: span 11;
+}
+
+.kol-12 {
+    grid-column: span 12;
+}
+.rad-1 {
+    grid-row: span 1;
+}
+
+.rad-2 {
+    grid-row: span 2;
+}
+
+.rad-3 {
+    grid-row: span 3;
+}
+
+.rad-4 {
+    grid-row: span 4;
+}
+
+.rad-5 {
+    grid-row: span 5;
+}

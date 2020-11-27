@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Resultatliste</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: black;
+            outline: none;
+        }
+
+        body {
+            background-image: url(bilder/bg.jpg);
+            background-size: 100vw;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        #tilbakeTilForsiden {
+            height: 5rem;
+            width: 10rem;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            border: none;
+            background-color: lightgreen;
+            font-size: 1.3rem;
+        }
+        #tilbakeTilForsiden:hover {
+            background-color: lawngreen;
+        }
+        #tilbakeTilForsiden:active {
+            background-color: lightseagreen;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            margin: 1rem 3rem 0 3rem;
+            text-align: center;
+        }
+        #resultatliste {
+            margin-top: 2rem;
+            grid-column: span 7;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            grid-row-gap: 1rem;
+        }
+        #flexfill {
+            flex-grow: 1;
+        }
+
+        footer {
+            padding: 0 0 1rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resultatliste for <i>Gjettespillet!</i></h1>
+    </header>
+    <button id="tilbakeTilForsiden" onclick="window.location.href='index.html'">Tilbake til forsiden</button>
+    <main>
+        <h2>Navn</h2>
+        <h2>Score</h2>
+        <h2>Antall gjetninger</h2>
+        <h2>Brukt tid</h2>
+        <h2>Vanskelighetsgrad</h2>
+        <h2>Antall mulige tall</h2>
+        <h2>Vinnertall</h2>
+        <div id="resultatliste"></div>
+    </main>
+    <h2 id="flexfill"></h2>
+    <footer>
+        <b>Gjett tallet!</b> er laget av <i>Adrian A. Andersen</i> for IT1 2018
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBIrD8uiCbUE0cUAFU6uG0WeJ3kNvWBoW0",
+            authDomain: "project-gjettespill.firebaseapp.com",
+            databaseURL: "https://project-gjettespill.firebaseio.com",
+            projectId: "project-gjettespill",
+            storageBucket: "project-gjettespill.appspot.com",
+            messagingSenderId: "839536326286"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script>
+        const database = firebase.database();
+        const lb = database.ref("lb");
+
+        function leggTilResultat(snapshot) {
+            let nyttResultat = snapshot.val();
+            let entry = `<div>${nyttResultat.navn}</div><div>${nyttResultat.score}</div>
+                         <div>${nyttResultat.antallGjetninger}</div><div>${nyttResultat.bruktTid} sek</div>
+                         <div>${nyttResultat.vanskelighetsgrad}</div><div>${nyttResultat.antallMuligeTall}</div>
+                         <div>${nyttResultat.vinnertall}</div>`;
+            document.getElementById("resultatliste").innerHTML = entry + document.getElementById("resultatliste").innerHTML
+        }
+        lb.orderByChild("score").on("child_added", leggTilResultat);
+        lydLb = new Audio('audio/lb.mp3')
+        lydLb.play();
+    </script>
+</body>
+</html>

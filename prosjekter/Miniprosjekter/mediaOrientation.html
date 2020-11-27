@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>@media test</title>
+    <style>
+        body {
+            background-color: grey;
+            text-align: center;
+        }
+        @media(orientation: landscape) {
+            .portrait {display: none;}
+        }
+        @media(orientation: portrait) {
+            .landscape {display:none;}
+        }
+    </style>
+    <link href="UniversalNavigation.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../../index.html" class="a" id="skineser">Skineser.no</a>
+    <a href="norge.html" class="a" id="forrige">Forrige</a>
+    <a href="gridLines.html" class="a" id="neste">Neste</a>
+    <h1 class="landscape">Du er i landscape mode.</h1>
+    <h1 class="portrait">Du er i portrait mode.</h1>
+
+</body>
+</html>

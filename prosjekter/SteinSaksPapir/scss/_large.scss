@@ -1,0 +1,54 @@
+/*---------------------------- BODY ----------------------------*/
+
+/*------------------------- NAVIGATION -------------------------*/
+/*-------------------------- HEADER ----------------------------*/
+/*---------------------------- MAIN ----------------------------*/
+main {
+    #containerMeny {
+        margin: 0 20%;
+    }
+
+    #containerSpill {
+        button {
+            margin: 0 30%;
+        }
+
+        div img {
+            width: 20%;
+        }
+
+        #valgContainer {
+            div img {
+                width: 20%;
+            }
+        }
+    }
+
+    #containerLagNyttSpill {
+        form {
+            width: 60%;
+        }
+    }
+
+    #containerFinnMotspiller {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        div {
+            width: 48%;
+        }
+    }
+
+    #containerBliMotspiller {
+        form {
+            width: 60%;
+        }
+    }
+
+    #containerOpptattLobby, #containerSjekkGyldigURL {
+        img {
+            width: 30%;
+        }
+    }
+}
+/*--------------------------- FOOTER ----------------------------*/

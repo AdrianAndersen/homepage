@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Det norske flagget</title>
+    <link href="UniversalNavigation.css" rel="stylesheet" />
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: 6fr 1fr 2fr 1fr 12fr;
+            grid-template-rows: 6fr 1fr 2fr 1fr 6fr;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            width: 75vw;
+            height: 47vw;
+            margin: 0 auto;
+            background-color: #ED2939;
+        }
+        #hvit1 {
+            grid-row: 1/6;
+            grid-column: 2/3;
+            background-color: white;
+        }
+        #hvit2 {
+            grid-row: 1/6;
+            grid-column: 4/5;
+            background-color: white;
+        }
+        #hvit1r1 {
+            grid-row: 2/3;
+            grid-column: 1/6;
+            background-color: white;
+        }
+        #hvit1r2 {
+            grid-row: 4/5;
+            grid-column: 1/6;
+            background-color: white;
+        }
+        #bla1 {
+            grid-row: 1/6;
+            grid-column: 3/4;
+            background-color: #002664;
+        }
+        #bla2 {
+            grid-row: 3/4;
+            grid-column: 1/6;
+            background-color: #002664;
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="a" id="skineser">Skineser.no</a>
+    <!--<a href="" class="a" id="forrige">Forrige</a>-->
+    <a href="mediaOrientation.html" class="a" id="neste">Neste</a>
+    <main>
+        <div id="hvit1"></div>
+        <div id="hvit2"></div>
+        <div id="hvit1r1"></div>
+        <div id="hvit1r2"></div>
+        <div id="bla1"></div>
+        <div id="bla2"></div>
+    </main>
+</body>
+</html>

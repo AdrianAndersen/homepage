@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href=favicon.ico sizes="16x16" type="favicon">
+    <title>Booking</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Hjem</a>
+                </li>
+                <li class="grow"></li>
+                <li>
+                    <a style="color: lightblue" href="#">Booking</a>
+                </li>
+                <li>
+                    <a href="#">Galleri</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">Om oss</a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="hotelTitle">Hotel California</h1>
+    </header>
+    <main>
+        <form id="skjemaBooking">
+            <div class="kol-2"></div>
+            <h1 class="kol-8">Bestill et rom</h1>
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <label class="kol-8" for="inpNavn">Navn:</label>
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <input class="kol-8" type="text" id="inpNavn" required placeholder="Ditt navn" />
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <label class="kol-8" for="inpFraDato">Fra:</label>
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <input class="kol-8" type="date" id="inpFraDato" required/>
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <label class="kol-8" for="inpTilDato">Til:</label>
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <input class="kol-8" type="date" id="inpTilDato" required />
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <label class="kol-8" for="selRomtypeBestilling">Velg et rom:</label>
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <select class="kol-8" id="selRomtypeBestilling"></select>
+            <div class="kol-2"></div>
+            <div class="kol-2"></div>
+            <div class="kol-10">
+                <p>Pris:
+                    <span id="pris"></span> kroner</p>
+            </div>
+            <div class="kol-2"></div>
+            <button id="bookingSubmit" class="kol-3" type="submit">Bestill</button>
+            <div id="musicControl" style="display: none">
+                <button id="musicButton">Stopp musikk</button>
+            </div>
+            <div class="kol-3" id="submitOK" style="display: none">
+                <p>Din bestilling er mottatt!</p>
+            </div>
+        </form>
+        <div id="bookingOverskrifter" style="display: none">
+            <div class="kol-2"></div>
+            <h1 class="kol-10">Bookingoversikt</h1>
+            <div class="kol-2"></div>
+            <h4>Vis</h4>
+            <select class="kol-2" id="selRomtypeOversikt">
+                <option value="" selected>Alle</option>
+            </select>
+            <div class="kol-7"></div>
+            <div class="kol-2"></div>
+            <h4>Sorter etter</h4>
+            <select class="kol-2" id="orderby">
+                <option value="navn">Navn</option>
+                <option value="type">Lagt til</option>
+                <option value="fraDato">Fra dato</option>
+                <option value="tilDato">Til dato</option>
+            </select>
+            <div class="kol-7"></div>
+            <div class="kol-2"></div>
+            <h2 class="kol-2">Navn</h2>
+            <h2 class="kol-2">Romtype</h2>
+            <h2 class="kol-2">Fra</h2>
+            <h2 class="kol-3">Til</h2>
+        </div>
+        <div id="bookingliste"></div>
+    </main>
+    <footer>
+        <p>Siden er laget av Adrian, 2STB 2018.</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCrY3VkJxPhCjsBNKyzgpaKOSc8Ps6rlsA",
+            authDomain: "project-hotel-key.firebaseapp.com",
+            databaseURL: "https://project-hotel-key.firebaseio.com",
+            projectId: "project-hotel-key",
+            storageBucket: "",
+            messagingSenderId: "146062444888"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="scripts/booking.js"></script>
+</body>
+
+</html>

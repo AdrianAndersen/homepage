@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Adrians Eksprimentlab!</title>
+    <style>
+        @keyframes fremOgTilbake {
+            0% {
+                left: 0vw;
+                top: 0vh;
+                border-radius: 10%;
+            }
+            25% {
+                left: 80vw;
+                top: 0vh;
+                border-radius: 50%;
+                background-color: violet;
+            }
+            50% {
+                left: 80vw;
+                top: 80vh;
+                border-radius: 10%;
+                background-color: purple;
+            }
+            75% {
+                left: 0vw;
+                top: 80vh;
+                border-radius: 50%;
+                background-color: salmon;
+            }
+            100% {
+                left: 0vw;
+                top: 0vh;
+                border-radius: 10%;
+                background-color: blueviolet;
+            }
+        }
+        @keyframes TilbakeOgFrem {
+            0% {
+                left: 80vw;
+                top: 0vh;
+                border-radius: 10%;
+            }
+            25% {
+                left: 80vw;
+                top: 80vh;
+                border-radius: 50%;
+                background-color: violet;
+            }
+            50% {
+                left: 0vw;
+                top: 80vh;
+                border-radius: 10%;
+                background-color: purple;
+            }
+            75% {
+                left: 0vw;
+                top: 0vh;
+                border-radius: 50%;
+                background-color: salmon;
+            }
+            100% {
+                left: 80vw;
+                top: 0vh;
+                border-radius: 10%;
+                background-color: blueviolet;
+            }
+        }
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        #box1 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            animation: fremOgTilbake 10s linear infinite;
+        }
+        #box2 {
+            position: absolute;
+            left: 80vw;
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            animation: TilbakeOgFrem 10s linear infinite reverse;
+        }
+    </style>
+    <link href="UniversalNavigation.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="../../index.html" class="a" id="skineser">Skineser.no</a>
+    <a href="tennis.html" class="a" id="forrige">Forrige</a>
+    <a href="../../index.html" class="a" id="neste">Tilbake til Skineser.no</a>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="no">
+<head>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta charset="utf-8">
+    <title>Skineser.no - Kontakt Adrian</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <!-- STYLE SHEETS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li id="navLogo"><a href="index.html">Skineser.no</a></li>
+            <li id="navGap"></li>
+            <li><a href="prosjekter.html">Prosjekter</a></li>
+            <li><a href="skineser.html">Hva er en skineser?</a></li>
+            <li><a href="omAdrian.html">Om Adrian</a></li>
+            <li class="active"><a href="kontakt.html">Kontakt Adrian</a></li>
+        </ul>
+    </nav>
+    <div id="responsivLogo">
+        <h1>Skineser</h1>
+    </div>
+    <button id="hamKnapp">
+        <div class="HBlinje"></div>
+        <div class="HBlinje"></div>
+        <div class="HBlinje"></div>
+    </button>
+    <!-- HEADER -->
+    <header id="kontaktHeader">
+        <h1>Kontakt Adrian</h1>
+        <h2>Her finner du informasjon om hvordan du kan kontakte Adrian.</h2>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div id="containerKontaktside">
+            <div id="kontaktinformasjon">
+                <h2>Du finner Adrian her</h2>
+                <a href="" title="Send meg en epost" target="_blank" class="fa fa-envelope"></a>
+                <a href="" title="Ring meg" target="_blank" class="fa fa-address-book"></a>
+                <a href="" title="Følg meg på Facebook" target="_blank" class="fa fa-facebook"></a>
+                <a href="" title="Sjekk ut min Linkedin-profil" target="_blank" class="fa fa-linkedin"></a>
+                <a href="" title="Følg meg på Youtube" target="_blank" class="fa fa-youtube"></a>
+            </div>
+            <h2>Send ham en en melding</h2>
+            <p>Fyll ut skjemaet under, eller send en epost til <a href="" class="linkMail"></a></p>
+            <form id="kontaktForm" action="https://www.domeneshop.no/cgi-bin/mailto.cgi" accept-charset="ISO-8859-1">
+                <input type="hidden" name="_to" value="adrian@skineser.no">
+                <input type="hidden" name="_resulturl" value="https://www.skineser.no/kvitering.html">
+
+
+                <label for="inpNavn">Navn<b class="error">*</b></label>
+                <input type="text" name="Navn" required placeholder="Ditt navn" id="inpNavn" />
+
+                <label for="inpEpost">Epostadresse<b class="error">*</b></label>
+                <input type="email" name="_from" required placeholder="Din epostadresse" id="inpEpost" />
+
+                <label for="inpNr">Telefonnummer (valgfritt)</label>
+                <input type="tel" placeholder="Ditt telefonnummer" name="Telefonnummer" id="inpNr" />
+
+                <label for="inpTema">Hva gjelder det?<b class="error">*</b></label>
+                <input type="text" name="_subject" required placeholder="Kort om meldingen" id="inpTema" />
+
+                <label for="inpMelding">Melding<b class="error">*</b></label>
+                <textarea required name="Melding" placeholder="Din melding" id="inpMelding"></textarea>
+
+                <button id="knappSubmit" type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <address>
+            <p><a href="kontakt.html">Kontakt Adrian</a></p>
+            <p><a href="" class="linkPhone"></a></p>
+            <p><a href="" class="linkMail">epost: </a></p>
+        </address>
+        <div id="socialicons">
+            <a href="" title="Følg meg på Facebook" target="_blank" class="fa fa-facebook"></a>
+            <a href="" title="Følg meg på Youtube" target="_blank" class="fa fa-youtube"></a>
+            <a href="" title="Sjekk ut min Linkedin-profil" target="_blank" class="fa fa-linkedin"></a>
+        </div>
+        <p class="copyright"></p>
+    </footer>
+    <script src="scripts/skineser.js"></script>
+</body>
+</html>

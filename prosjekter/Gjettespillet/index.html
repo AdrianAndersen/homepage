@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Gjett tallet!</title>
+</head>
+<body>
+    <header><h1 id="logo">Gjett tallet!</h1></header>
+    <main>
+        <article id="scoreBoard">
+            <h1 class="kol-2">Beste resultater</h1>
+            <b>Navn</b>
+            <b>Score</b>
+            <div class="kol-2 rad-5" id="topp5Container"></div>
+            <button class="kol-2 knappLinkHighscore" onclick="window.location.href = 'lb.html'">Se alle resultater</button>
+        </article>
+        <article id="startside" style="display: grid">
+            <h2>Velg vanskelighetsgrad</h2>
+            <form id="skjemaLagVinnertall">
+                <div class="kol-4"></div>
+                <button type="button" id="knappDifLett" class="difknapper">Lett</button>
+                <button type="button" id="knappDifMiddels" class="difknapper">Middels</button>
+                <button type="button" id="knappDifVanskelig" class="difknapper">Vanskelig</button>
+                <button type="button" id="knappDifGodTid" class="difknapper">Så du har god tid?</button>
+                <div class="kol-4"></div>
+                <div class="kol-5"></div>
+                <button type="button" id="knappDifEgendefinert" class="kol-2 difknapper">Egendefinert</button>
+                <div class="kol-5"></div>
+                <div class="kol-4"></div>
+                <label class="kol-1" for="inpMinValVinnertall">Fra</label>
+                <div class="kol-2"></div>
+                <label class="kol-1" for="inpMaxValVinnertall">Til</label>
+                <div class="kol-2"></div>
+                <div class="kol-4"></div>
+                <input type="number" required id="inpMinValVinnertall" />
+                <img class="kol-2" src="http://www.animatedimages.org/data/media/111/animated-arrow-image-0039.gif" border="0" alt="animated-arrow-image-0039" />
+                <input type="number" required id="inpMaxValVinnertall" />
+                <div class="kol-4"></div>
+                <button class="kol-12" type="submit" id="knappLagVinnertall">Start spillet!</button>
+                <div class="kol-5"></div>
+            </form>
+        </article>
+        <article id="ingameside" style="display: none">
+            <div class="kol-3" id="tidtaker"><b>Gjenstående tid:</b> <label id="ingamesekunder">30</label> sek</div>
+            <div class="kol-9"></div>
+            <div class="kol-3" id="gjettecontainer"><b>Antall gjetninger igjen:</b> <label id="ingamegjetninger"></label></div>
+            <div class="kol-9"></div>
+            <div class="kol-3"></div>
+            <div id="defmengdeContainer" class="kol-6">
+                <div id="topLeft"></div>
+                <label id="defMinVal">-10</label>
+                <div style="grid-column: span 100" id="topMiddle"></div>
+                <label id="defMaxVal">10</label>
+                <div id="topRight"></div>
+
+                <div class="kol-2" id="bottomLeft"></div>
+                <div style="grid-column: span 100" id="bottomMiddle"></div>
+                <div class="kol-2" id="bottomRight"></div>
+
+
+            </div>
+            <div class="kol-3"></div>
+            <div class="kol-5"></div>
+            <label class="kol-2" for="inpGjetning">Din gjetning</label>
+            <div class="kol-5"></div>
+            <div class="kol-5"></div>
+            <input class="kol-2" id="inpGjetning" type="number">
+            <div class="kol-5"></div>
+            <button class="kol-12" type="button" id="knappGjetning">Gjett!</button>
+        </article>
+        <article id="resultatside" style="display: none">
+            <h2 class="kol-12">Gratulerer, du gjettet riktig!</h2>
+            <h3 class="kol-12">Tallet var:</h3>
+            <div id="vinnertallResultat" class="kol-12"></div>
+            <h2 class="kol-12">Resultater</h2>
+            <div class="kol-12" id="resultater">
+                <b>Vanskelighetsgrad:</b>
+                <p id="resultatVanskelighetsgrad"></p>
+                <b>Brukt tid:</b>
+                <p><label id="resultatBruktTid"></label> sekunder</p>
+                <b>Antall forsøk:</b>
+                <p id="resultatAntallForsok"></p>
+                <b>Antall mulige tall:</b>
+                <p id="resultatAntallMuligeTall"></p>
+                <b>Score:</b>
+                <p id="resultatScore"></p>
+
+            </div>
+            <h2 class="kol-12">Registrer ditt resultat</h2>
+            <div class="kol-5"></div>
+            <form id="skjemaRegResultat" class="kol-2" style="display: grid">
+                <label for="inpNavnResultater">Navn:<label id="required">*</label></label>
+                <input id="inpNavnResultater" type="text" required placeholder="Ole" />
+
+                <label for="inpEpostResultater">Epost:</label>
+                <input id="inpEpostResultater" type="email" placeholder="ole.olesen@online.com" />
+
+                <button id="knappSendResultat" type="submit">Send inn mitt resultat</button>
+            </form>
+            <div class="kol-5"></div>
+            <div class="kol-5"></div>
+            <button type="button" class="knappLinkHighscore kol-2" onclick="window.location.href = 'lb.html'">Se alle resultater</button>
+            <div class="kol-5"></div>
+            <div class="kol-5"></div>
+            <button id="knappHjem" type="button" onclick="window.location.reload()" class="knappReload kol-2">Tilbake til startsiden</button>
+            <div class="kol-5"></div>
+        </article>
+        <article id="gameOver" style="display: none">
+            <h1>Game Over</h1>
+            <h2>Tallet var:</h2>
+            <b id="gameOverRiktigTall"></b>
+            <p id="gameOverForsok" style="display: none">Du brukte for mange forsøk.</p>
+            <p id="gameOverTid" style="display: none">Du brukte for lang tid.</p>
+            <button type="button" onclick="window.location.reload()" class="knappReload">Tilbake til start</button>
+            <button class="knappLinkHighscore" onclick="window.location.href = 'lb.html'">Se alle resultater</button>
+        </article>
+    </main>
+    <div id="flexfill"></div>
+    <footer>
+        <b>Gjett tallet!</b> er laget av <i>Adrian A. Andersen</i> for IT1 2018
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBIrD8uiCbUE0cUAFU6uG0WeJ3kNvWBoW0",
+            authDomain: "project-gjettespill.firebaseapp.com",
+            databaseURL: "https://project-gjettespill.firebaseio.com",
+            projectId: "project-gjettespill",
+            storageBucket: "project-gjettespill.appspot.com",
+            messagingSenderId: "839536326286"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

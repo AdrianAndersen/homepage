@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cryptr</title>
+    <link rel="stylesheet" href="cryptr.css" />
+</head>
+<body>
+    <h1>Cryptr</h1>
+    <div id="selElement">
+        <h2>Velg krypteringsalgoritme</h2>
+        <select id="selectEncryptionMethod">
+            <option value="CaesarCipher">Caesar Cipher</option>
+            <!--
+            <option value="ScytaleCipher">Scytale Cipher</option>
+            <option value="">Alberti Cipher</option>
+            <option value="">Vigenère Cipher</option>
+            <option value="">Pigpen Cipher</option>
+            <option value="">Playfair Cipher</option>
+            <option value="">One time pads Cipher (OTP)</option>
+            <option value="">Jefferson Wheel Chipher</option>
+            <option value="">Engima</option>
+            <option value="">Data Encryption Standard (DES)</option>
+            <option value="">Advanced Encryption Standard (AES)</option>
+            <option value="">Secure Hash Algorithm (SHA)</option>
+            <option value="">Message Digest 5 Hash (MD5)</option>
+            -->
+        </select>
+    </div>
+    <div id="spanner"></div>
+    <form>
+        <h2>Krypter</h2>
+        <label for="inpCrypt">Skriv noe som skal krypteres</label>
+        <input id="inpCrypt" type="text" />
+        <h2>Resultat</h2>
+        <p id="outCrypt"></p>
+    </form>
+    <div id="spanner"></div>
+    <form>
+        <h2>Dekrypter</h2>
+        <label for="inpDecrypt">Skriv noe som skal dekrypteres</label>
+        <input id="inpDecrypt" type="text" />
+        <h2>Resultat</h2>
+        <p id="outDecrypt"></p>
+    </form>
+    <script src="cryptr.js"></script>
+</body>
+</html>

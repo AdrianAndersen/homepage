@@ -1,0 +1,391 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*---------------------------- BODY ----------------------------*/
+body {
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+/*------------------------- NAVIGATION -------------------------*/
+/*-------------------------- HEADER ----------------------------*/
+/*---------------------------- MAIN ----------------------------*/
+main {
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+        font-size: 1.75rem;
+        margin: 1rem 0 0 $gutter;
+        color: $accentColor;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: .75rem 0 0 $gutter;
+        color: lighten($primaryColor, 10%);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        color: lighten($primaryColor, 20%);
+    }
+
+    p {
+        line-height: 130%;
+        color: $fontColor;
+    }
+
+    #containerMeny {
+        display: none;
+        margin: $gutter;
+
+        h2 {
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        #containerKnapper {
+            display: grid;
+            grid-gap: .2rem;
+
+            button {
+                height: 3rem;
+                border: none;
+                font-size: 1.2rem;
+                background-color: $primaryColor;
+                outline: none;
+            }
+
+            .knappTilbake {
+                background-color: red;
+            }
+
+            button:hover {
+                opacity: .8;
+                transition: .5s;
+            }
+        }
+    }
+
+    #containerSpill {
+        display: none;
+        width: 100%-$gutterdbl;
+        margin: $gutter;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        button {
+            background-color: red;
+            border: none;
+            padding: 1rem;
+            display: none;
+            grid-column: span 2;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: orangered;
+        }
+
+        div {
+            grid-column: span 2;
+        }
+
+        #containerSpiller1, #containerSpiller2 {
+            display: none;
+
+            h2, p {
+                grid-column: span 2;
+            }
+        }
+
+        #containerSpiller1, #containerSpiller2 {
+            img:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: .5s;
+            }
+
+            .question:hover {
+                transform: none;
+                cursor: auto;
+            }
+
+            img {
+                width: 30%;
+            }
+        }
+
+        #containerScore {
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid black;
+            margin: .75rem 0;
+            padding: .2rem 0 .2rem 0;
+
+            div {
+                grid-column: span 1;
+            }
+
+            h4 {
+                margin-bottom: .2rem;
+            }
+        }
+
+        #valgContainer {
+            display: none;
+            grid-column: span 2;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-grow: 0;
+            margin-bottom: .2rem;
+
+            div {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-grow: 0;
+
+                h2, p {
+                    width: 100%;
+                }
+
+                img {
+                    width: 50%;
+                    height: 75%;
+                    flex-grow: 0;
+                }
+            }
+        }
+
+
+        #resultat {
+            display: none;
+            grid-column: span 2;
+            margin-bottom: 1rem;
+        }
+    }
+
+    #containerLagNyttSpill {
+        width: 100%-$gutterdbl;
+        margin: $gutter;
+        display: none;
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+
+        .required {
+            color: red;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        h2, label, input {
+            width: 100%;
+        }
+
+        form {
+            text-align: left;
+            display: grid;
+            width: 100%;
+
+
+            input {
+                margin: .5rem 0;
+                height: 3rem;
+                font-size: 1.2rem;
+            }
+
+            button {
+                background-color: greenyellow;
+                padding: .8rem;
+                margin: .2rem 0;
+                border: none;
+                width: 100%;
+            }
+
+            button:hover {
+                transition: .5s;
+                background-color: lawngreen;
+            }
+
+            .menyknapp {
+                background-color: red;
+            }
+
+            .menyknapp:hover {
+                background-color: orangered;
+            }
+        }
+    }
+
+    #containerFinnMotspiller {
+        justify-content: center;
+        width: 100%-$gutterdbl;
+        margin: $gutter;
+        display: none;
+        flex-wrap: wrap;
+
+        div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 100%;
+
+                input {
+                    flex-grow: 1;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    border: 1px solid black;
+                }
+
+                .fa {
+                    padding: 1rem;
+                    border: 1px solid black;
+                    border-left: none;
+                    font-size: 1.1rem;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                .fa:hover {
+                    background-color: navajowhite;
+                    transition: .5s;
+                }
+
+                .fa:active {
+                    transition: none;
+                    background-color: white;
+                }
+            }
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        a {
+            padding: 1rem;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .menyknapp {
+            background-color: red;
+            padding: 1rem;
+            border: none;
+            margin-top: .4rem;
+        }
+
+        .menyknapp:hover {
+            background-color: orangered;
+        }
+    }
+
+    #containerBliMotspiller {
+        display: none; // Flexbox
+        justify-content: center;
+        width: 100%-$gutterdbl;
+        margin: $gutter;
+
+        h2 {
+            margin: 1rem 0;
+        }
+
+        form {
+            text-align: left;
+            display: grid;
+            width: 100%;
+
+            label .required {
+                color: red;
+            }
+            input {
+                margin: .5rem 0;
+                height: 3rem;
+                font-size: 1.2rem;
+            }
+
+            button {
+                background-color: greenyellow;
+                padding: .8rem;
+                margin: .2rem 0;
+                border: none;
+                width: 100%;
+            }
+
+            button:hover {
+                transition: .5s;
+                background-color: lawngreen;
+            }
+
+            .menyknapp {
+                background-color: red;
+                padding: 1rem;
+                border: none;
+                margin-top: .4rem;
+            }
+
+            .menyknapp:hover {
+                background-color: orangered;
+            }
+        }
+    }
+
+    #containerOpptattLobby, #containerSjekkGyldigURL {
+        display: none;
+        text-align: center;
+        img {
+            margin-top: 1rem;
+            width: 80%;
+        }
+        h2 {
+            margin: 1rem 0;
+        }
+    }
+}
+/*--------------------------- FOOTER ----------------------------*/
+footer {
+    padding: 1.3rem;
+    background-color: $accentColor;
+    color: white;
+    text-align: center;
+
+    h4 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin: .2rem;
+    }
+}

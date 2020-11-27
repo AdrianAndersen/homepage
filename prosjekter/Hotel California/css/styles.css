@@ -1,0 +1,88 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+body {
+    background-color: whitesmoke;
+}
+.hotelTitle {
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    background-image: url("../bilder/indexbanner.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: 100vw;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    flex-basis: 8rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+nav ul li a:hover {
+    color: burlywood;
+}
+.grow {
+    flex-grow: 1;
+}
+main form {
+    margin: 1rem 0 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0.5rem;
+}
+#bookingSubmit {
+    height: 2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: deepskyblue;
+}
+#musicButton {
+    text-align: center;
+    height: 100%;
+    border: none;
+    font-size: 0.75rem;
+    padding: 0 0.25rem 0 0.25rem;
+    background-color: yellowgreen;
+}
+#musicButton:hover {
+    background-color: orangered;
+}
+#bookingSubmit:hover {background-color: dodgerblue}
+#bookingliste, #bookingOverskrifter{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+.kol-2 {
+    grid-column: span 2;
+}
+.kol-3 {
+    grid-column: span 3;
+}
+.kol-7 {
+    grid-column: span 7;
+}
+.kol-8 {
+    grid-column: span 8;
+}
+.kol-10 {
+    grid-column: span 10;
+}
+footer {
+    padding: 5rem;
+    background-color: skyblue;
+    margin-top: 2rem;
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+{
+  "romtyper": {
+    "1": {
+      "beskrivelse": "Enkeltrom",
+      "maksAntallPersoner": 1,
+      "dognpris": 200
+    },
+    "2": {
+      "beskrivelse": "Dobbeltrom",
+      "maksAntallPersoner": 2,
+      "dognpris": 350
+    },
+    "3": {
+      "beskrivelse": "Suite",
+      "maksAntallPersoner": 4,
+      "dognpris": 2000
+    }
+  }
+}

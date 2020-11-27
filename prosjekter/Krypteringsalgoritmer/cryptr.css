@@ -1,0 +1,59 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+body {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+h1 {
+    grid-column: span 6;
+    margin: 1rem 0 4rem 0;
+}
+
+h2 {
+    margin: 1rem;
+}
+
+form {
+    text-align: center;
+    display: grid;
+}
+
+#spanner {
+    grid-column: span 1;
+}
+
+input {
+    font-size: 1.2rem;
+    height: 3rem;
+    display: grid;
+    border: 1px solid green;
+    margin: 0.2rem 0 0.5rem 0;
+    max-width: 30rem;
+}
+p {
+    height: 4rem;
+    width: 100%;
+    max-width: 30rem;
+}
+#selElement {
+    grid-column: span 6;
+}
+#selElement select {
+    width: 13rem;
+}
+@media screen and (orientation: portrait) {
+    #spanner {
+        display: none;
+    }
+    form {
+        grid-column: span 6;
+    }
+}

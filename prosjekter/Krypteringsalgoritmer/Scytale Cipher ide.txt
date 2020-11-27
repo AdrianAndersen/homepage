@@ -1,0 +1,15 @@
+Scytale
+
+Først finne ut hvor mange blokker med 5 bokstaver det er
+Lage arrayer med 5 bokstaver i hver + 1 med mindre
+Plusse sammen slik at arr1[0]+arr2[0]+arr1[1]+arr2[1]
+
+
+Arr1 = [H J E L P]
+Arr2 = [M E G J E]
+Arr3 = [G T R E N]
+Arr4 = [G E R _ _]
+
+blir til 
+
+nyArr[H M G G J E T T E E G R R L J E _ P E N _]

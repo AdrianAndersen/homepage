@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Adrians Eksprimentlab!</title>
+    <style>
+        @keyframes fremOgTilbake {
+            0% {
+                top: 0vh;
+            }
+            100% {
+                top: 80vh;
+                transform: rotate(360deg);
+            }
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        #tennis {
+            position: absolute;
+            width: 100px;
+            animation: fremOgTilbake alternate 1s 1s cubic-bezier(1,.26,.74,.83);
+            animation-iteration-count: infinite;
+        }
+        #bang {
+            margin: 70vh 0 0 35vw;
+            position: absolute;
+            transform: rotate(90deg);
+        }
+
+        button {
+            margin: 10vw 0 0 20vw;
+        }
+    </style>
+    <link href="UniversalNavigation.css" rel="stylesheet" />
+</head>
+
+<body>
+    <a href="../../index.html" class="a" id="skineser">Skineser.no</a>
+    <a href="gridLines.html" class="a" id="forrige">Forrige</a>
+    <a href="boxAnimation.html" class="a" id="neste">Neste</a>
+    <img id="tennis" src="tennis-ball.svg">
+    <img style="display: none" id="bang" src="bang.png">
+    <!--<button>Stopp</button>-->
+    <script>
+        var tennis = document.getElementById("tennis");
+        var bang = document.getElementById("bang");
+        function visBang() {
+            if (bang.style.display == "none" && ) {
+                bang.style.display = "block";
+                bang.style.transform = "scale(2) rotate(90deg)";
+                bang.innerHTML.
+                        } else {
+                bang.style.display = "none";
+                bang.style.transform = "scale(2) rotate(90deg)";
+            }
+        }
+        tennis.addEventListener("animationiteration", visBang, false);
+        tennis.addEventListener("animationend", visBang, false);
+    </script>
+</body>
+
+</html>

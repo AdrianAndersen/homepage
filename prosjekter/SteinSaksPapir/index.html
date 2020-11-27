@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Stein, Saks, Papir!</title>
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <meta property="og:title" content="Stein, saks, papir! - Et spill av Adrian" />
+    <meta property="og:image" content="images/ssp.jpg" />
+    <meta property="og:site_name" content="Skineser.no" />
+    <meta property="og:description"
+          content="Prøv å slå meg i stein, saks, papir!" />
+</head>
+<body>
+    <main>
+        <h1 id="overskrift">Stein, saks, papir!</h1>
+        <div id="containerMeny">
+            <h2>Hovedmeny</h2>
+            <div id="containerKnapper">
+                <button id="knappEnkeltspiller">Enkeltspiller</button>
+                <button id="knappLokalFlerspiller">Lokal flerspiller</button>
+                <button id="knappOnlineFlerspiller">Start et nytt online-spill</button>
+            </div>
+        </div>
+        <div id="containerSpill">
+            <button id="knappHovedmeny" class="menyknapp">Til hovedmenyen</button>
+            <div id="containerScore">
+                <div>
+                    <h4 id="txtScoreSpiller1">&Delta; Score spiller 1</h4>
+                    <p id="scoreSpiller1">0</p>
+                </div>
+                <div>
+                    <h4 id="txtScoreSpiller2">&Delta; spiller 2</h4>
+                    <p id="scoreSpiller2">0</p>
+                </div>
+            </div>
+            <div id="containerSpiller1">
+                <h2 id="txtSpiller1">&Delta; Spiller 1</h2>
+                <p id="txtForklaringSpiller1">&Delta; Forklarende tekst...</p>
+                <img src="images/stein.png" class="p1vaapen" alt="Stein" data-vaapen="stein" />
+                <img src="images/saks.png" class="p1vaapen" alt="Saks" data-vaapen="saks" />
+                <img src="images/papir.png" class="p1vaapen" alt="Papir" data-vaapen="papir" />
+                <img src="images/question.png" class="p1vaapen question" alt="Question" />
+                <img src="images/cm.jpg" class="p1vaapen" alt="CM"  data-vaapen="cm" />
+
+            </div>
+            <div id="containerSpiller2">
+                <h2 id="txtSpiller2">&Delta; Spiller 2</h2>
+                <p id="txtForklaringSpiller2">&Delta; Forklarende tekst...</p>
+                <div>
+                    <img src="images/stein.png" class="p2vaapen" alt="Stein" data-vaapen="stein" />
+                    <img src="images/saks.png" class="p2vaapen" alt="Saks" data-vaapen="saks" />
+                    <img src="images/papir.png" class="p2vaapen" alt="Papir" data-vaapen="papir" />
+                    <img src="images/question.png" class="p2vaapen question" alt="Question" />
+                    <img src="images/onlinewait.gif" class="p2vaapen question" id="dotwait" alt="Venter på valg..." />
+
+                </div>
+            </div>
+            <div id="valgContainer">
+                <div>
+                    <h2 id="txtValgSpiller1">&Delta; Valgtekst spiller 1</h2>
+                    <p id="txtValgTekstSpiller1">&Delta; Forklarende tekst...</p>
+                    <img src="images/stein.png" class="valgtVaapenP1" alt="Stein" />
+                    <img src="images/saks.png" class="valgtVaapenP1" alt="Saks" />
+                    <img src="images/papir.png" class="valgtVaapenP1" alt="Papir" />
+                    <img src="images/question.png" class="valgtVaapenP1 question" alt="Question" />
+                    <img src="images/cm.jpg" class="valgtVaapenP1" alt="CM" />
+                </div>
+                <div>
+                    <h2 id="txtValgSpiller2">&Delta; Valgtekst spiller 2</h2>
+                    <p id="txtValgTekstSpiller2">&Delta; Forklarende tekst...</p>
+                    <img src="images/stein.png" class="valgtVaapenP2" alt="Stein" />
+                    <img src="images/saks.png" class="valgtVaapenP2" alt="Saks" />
+                    <img src="images/papir.png" class="valgtVaapenP2" alt="Papir" />
+                    <img src="images/question.png" class="valgtVaapenP2 question" alt="Question" />
+                    <img src="images/onlinewait.gif" class="valgtVaapenP2 question" id="dotwait" alt="Venter på valg..." />
+                </div>
+            </div>
+            <div id="resultat">
+                <h1 id="resultatOS"></h1>
+                <h1 id="resultatStilling"></h1>
+            </div>
+        </div>
+        <div id="containerLagNyttSpill">
+            <h2>Lag et nytt online-spill</h2>
+            <form id="skjemaLagNyttSpill">
+                <label for="inpNavnP1">Skriv inn navnet ditt<b class="required">*</b></label>
+                <input required id="inpNavnP1" type="text" name="name" placeholder="Ditt navn" />
+                <button type="submit">Lag et nytt spill</button>
+                <button class="menyknapp">Tilbake</button>
+            </form>
+        </div>
+        <div id="containerFinnMotspiller">
+            <div>
+                <h2>Finn en motspiller</h2>
+                <p>Gi denne lenken til motspilleren din</p>
+                <div>
+                    <input readonly id="ContainerSpillLenke" />
+                    <i title="Kopier link" id="copycat" class="fa fa-clone"></i>
+                </div>
+                <button class="menyknapp">Tilbake til hovedmenyen</button>
+            </div>
+            <div>
+                <h2>Status</h2>
+                <p id="onlineStatus">Venter på motspiller...</p>
+                <img src="images/waiting.gif" alt="Illustrasjon av å vente" />
+            </div>
+        </div>
+        <div id="containerBliMotspiller">
+            <form id="skjemaRegistrerMotspiller">
+                <h2>Du har blitt utfordret av <span id="utfordrer"></span>!</h2>
+                <label for="inpNavnP2">Skriv inn navnet ditt<b class="required">*</b></label>
+                <input required id="inpNavnP2" type="text" name="name" placeholder="Ditt navn" />
+                <button type="submit">Bli med i spill</button>
+            </form>
+        </div>
+        <div id="containerOpptattLobby">
+            <h2>Lenken du brukte har utløpt!</h2>
+            <p>Du vil nå bli sendt tilbake til hovedmenyen...</p>
+            <img src="images/waiting.gif" alt="Loading..." />
+        </div>
+        <div id="containerSjekkGyldigURL">
+            <h2>Velkommen til <i>Stein, saks, papir!</i></h2>
+            <p>Vent et øyeblikk, mens vi sjekker lenken din...</p>
+            <img src="images/onlinewait.gif" alt="Loading..." />
+        </div>
+    </main>
+    <footer>
+        <h4><i>Stein, Saks, Papir!</i></h4>
+        <p>Adrian Arthur Andersen</p>
+        <p>Q4 2018</p>
+        <p><a href="https://www.skineser.no/">Skineser.no</a></p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC5OpFq97H4lRkg5mZnZPsoQNvt3d6CT8A",
+            authDomain: "project-stein-saks-papir.firebaseapp.com",
+            databaseURL: "https://project-stein-saks-papir.firebaseio.com",
+            projectId: "project-stein-saks-papir",
+            storageBucket: "project-stein-saks-papir.appspot.com",
+            messagingSenderId: "112300097622"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
